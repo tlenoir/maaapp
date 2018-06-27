@@ -1,14 +1,9 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-buttons id="content-buttons">
+    <button id="block-button" class="caterer" ion-button color="secondary" round (click)="goToLoginPage('Traiteur')" >Traiteur</button>
+    <button id="block-button" class="colab" ion-button color="secondary" round (click)="goToLoginPage('Collaborateur')">Collaborateur</button>
+  </ion-buttons>
 </ion-content>
