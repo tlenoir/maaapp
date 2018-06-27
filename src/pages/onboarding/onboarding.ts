@@ -1,24 +1,29 @@
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the OnboardingPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-onboarding',
   templateUrl: 'onboarding.html',
 })
 export class OnboardingPage {
+  goHome: string = "Start";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  }
+  go() {
+    this.goHome;
+    this.navCtrl.setRoot(HomePage);
+    console.log('go to home GOOD');
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad OnboardingPage');
   }
+
+
+
 
 }
