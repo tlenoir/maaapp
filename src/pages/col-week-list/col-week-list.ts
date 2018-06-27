@@ -1,3 +1,4 @@
+import { ColDaysListPage } from './../col-days-list/col-days-list';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -21,4 +22,8 @@ export class ColWeekListPage {
     console.log('ionViewDidLoad ColWeekListPage');
   }
 
+
+  launchDaysPage()  {
+    this.navCtrl.push(ColDaysListPage);
+  }
 }

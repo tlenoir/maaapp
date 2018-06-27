@@ -58,6 +58,7 @@ import { PhonegapLocalNotification } from '@ionic-native/phonegap-local-notifica
     DateTime,
     SQLite,
     Camera,
+    ToastController,
     PhonegapLocalNotification
   ]
 })
