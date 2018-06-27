@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Platform } from 'ionic-angular';
 
-/**
- * Generated class for the TrMenuListPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { TrAddMenuPage } from '../tr-add-menu/tr-add-menu';
 
 @Component({
   selector: 'page-tr-menu-list',
@@ -14,11 +9,23 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class TrMenuListPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    platform: Platform) {
+
+    platform.ready().then(() => {
+
+    });
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TrMenuListPage');
+  }
+
+  goToTrAddMenuPage() {
+    this.navCtrl.push(TrAddMenuPage);
   }
 
 }
