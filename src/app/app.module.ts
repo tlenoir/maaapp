@@ -23,7 +23,7 @@ import { UserData } from "../providers/user-data";
 import { HttpClientModule } from '@angular/common/http';
 import { File } from '@ionic-native/file';
 import { FilePath } from '@ionic-native/file-path';
-import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
+import { FileTransfer } from '@ionic-native/file-transfer';
 
 @NgModule({
   declarations: [
@@ -68,8 +68,7 @@ import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
     UserData,
     File,
     FilePath,
-    FileTransfer,
-    FileTransferObject
+    FileTransfer
   ]
 })
 export class AppModule {}
