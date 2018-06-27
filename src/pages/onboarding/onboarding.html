@@ -1,13 +1,13 @@
 <ion-content padding>
   <ion-slides pager>
     <ion-slide>
-      <div>
-        <img src="../../assets/icon/fiche.png">
-      </div>
       <h1>Traiteurs</h1>
       <ion-card-content>
-         Si vous êtes traiteurs vous pourriez mettre le menus de la semaine suivante 
+        Si vous êtes traiteurs vous pourriez mettre le menus de la semaine suivante
       </ion-card-content>
+      <div>
+        <img src="../../assets/imgs/traiteur.png">
+      </div>
     </ion-slide>
     <ion-slide>
       <div>
@@ -17,31 +17,33 @@
       <ion-card-content>
         Si vous êtes collaborateurs vous pouvez choisir le menu du jour ou le menu de la semaine
       </ion-card-content>
+
+      <ion-buttons>
+
+        <button ion-button (click)="skip()" id="skip">Skip</button>
+        <ion-checkbox color="dark" (ionChange)="updateCheckBox()"></ion-checkbox>
+
+      </ion-buttons>
     </ion-slide>
+
   </ion-slides>
-<!--
+  <!--
   Generated template for the OnboardingPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header *ngIf="!checkBox">
+  <ion-header *ngIf="!checkBox">
 
-  <ion-navbar>
-    <ion-title>Onboarding</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+      <ion-title>Onboarding</ion-title>
+    </ion-navbar>
 
-</ion-header>
+  </ion-header>
 
 
-<ion-content padding *ngIf="!checkBox" >
+  <ion-content padding *ngIf="!checkBox">
 
-  
-  <ion-buttons>
 
-      <button ion-button (click)="skip()" id="skip">Ne plus afficher</button>
-      <ion-checkbox color="dark" (ionChange)="updateCheckBox()" ></ion-checkbox> 
 
-  </ion-buttons>
-
-</ion-content>
+  </ion-content>
