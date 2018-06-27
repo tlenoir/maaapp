@@ -9,27 +9,33 @@
 
 <ion-content padding text-center>
 
-  <ion-list>
+  <form [formGroup]="form" (ngSubmit)="logForm()">
 
     <h3>Nom du plat</h3>
     <ion-item>
-      <ion-input type="text" placeholder="Entrez le nom du plat" text-center></ion-input>
-    </ion-item>
-
-    <h3>Description du plat</h3>
-    <ion-item>
-      <ion-input type="texte" placeholder="Description du plat" text-center></ion-input>
+      <ion-input type="text" formControlName="title" placeholder="Entrez le nom du plat" text-center></ion-input>
     </ion-item>
 
     <h3>Date</h3>
     <ion-item>
-      <ion-datetime displayFormat="DDDD DD MMMM YYYY" min="2018" max="2028" [(ngModel)]="zeudate" text-center></ion-datetime>
+      <ion-input placeholder="Choisissez votre date" [value]="dataInicial | date:'dd/MM/yyyy'" (click)="open()" text-center></ion-input>
     </ion-item>
 
-  </ion-list>
+    <ion-item no-lines hidden="true">
+      <ion-datetime #datePicker displayFormat="DD/MM/YYYY" formControlName="date" (ionCancel)="this.dataInicial  = null" [(ngModel)]="dataInicial"
+        doneText="Ok" cancelText="Annulé" [max]="maxDate">
+      </ion-datetime>
+    </ion-item>
 
-  <div padding>
-    <button ion-button color="primary" block>Sign In</button>
-  </div>
+    <h3>Description</h3>
+    <ion-item>
+      <ion-textarea formControlName="description" placeholder="Entrez la description" text-center></ion-textarea>
+    </ion-item>
+
+    <ion-item no-lines>
+      <button ion-button large color="secondary" type="submit" [disabled]="!form.valid" item-end>Ajouter</button>
+    </ion-item>
+
+  </form>
 
 </ion-content>

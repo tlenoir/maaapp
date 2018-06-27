@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+
+import { Http, Response } from '@angular/http';
 
 
 @Component({
@@ -8,14 +11,26 @@ import { NavController, NavParams, Platform } from 'ionic-angular';
 })
 export class TrAddMenuPage {
 
-  zeudate = '2018-09-02';
+  private form: FormGroup;
+  dataInicial: Date;
+  maxDate: string;
+  createMenu = 'http://groupe2.api/api/meal/create';
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    platform: Platform) {
+    platform: Platform,
+    public formBuilder: FormBuilder,
+    private camera: Camera,
+    public http: Http) {
 
     platform.ready().then(() => {
+
+      this.form = this.formBuilder.group({
+        title: ['', Validators.required],
+        description: ['', Validators.required],
+        date: ['', Validators.required],
+      });
 
     });
 
@@ -25,15 +40,20 @@ export class TrAddMenuPage {
     console.log('ionViewDidLoad TrAddMenuPage');
   }
 
-  calculateTime(offset: any) {
-    // create Date object for current location
-    let d = new Date();
+  logForm() {
+    console.log(this.form.value)
+  }
 
-    // create new Date object for different city
-    // using supplied offset
-    let nd = new Date(d.getTime() + (3600000 * offset));
-
-    return nd.toISOString();
+  @ViewChild('datePicker') datePicker;
+  open() {
+    if (!this.dataInicial) {
+      this.dataInicial = new Date().toJSON().split('T')[0];
+      setTimeout(() => {
+        this.datePicker.open();
+      }, 50)
+    } else {
+      this.datePicker.open();
+    }
   }
 
 }
