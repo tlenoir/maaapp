@@ -21,6 +21,8 @@ import { Camera } from '@ionic-native/camera';
 import { PhonegapLocalNotification } from '@ionic-native/phonegap-local-notification';
 import { UserData } from "../providers/user-data";
 import { HttpClientModule } from '@angular/common/http';
+import { ObsonatorProvider } from '../providers/obsonator';
+import { ContributorProvider } from '../providers/contributor';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { HttpClientModule } from '@angular/common/http';
     SQLite,
     Camera,
     PhonegapLocalNotification,
-    UserData
+    UserData,
+    ObsonatorProvider,
+    ContributorProvider
   ]
 })
 export class AppModule {}
