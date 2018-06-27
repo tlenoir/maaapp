@@ -1,3 +1,99 @@
 page-home {
 
+
+    @media (max-width: 500px) {
+
+        #content-buttons{
+
+            position: absolute;
+            margin: auto;
+            
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: auto;
+            height: auto;
+            
+        }
+    
+        #block-button{
+            margin: 35% auto;
+            display: block;
+        }
+    
+        
+    }
+    @media (min-width: 501px) {
+
+        #content-buttons{
+
+            position: absolute;
+            margin: auto;
+            
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: auto;
+            height: auto;
+            
+        }
+    
+        #block-button{
+            margin: 20% auto;
+            display: block;
+        }
+    
+        
+    }
+
+    @media (min-width: 700px) {
+
+        #content-buttons{
+
+            position: absolute;
+            margin: auto;
+            
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: auto;
+            height: auto;
+            
+        }
+    
+        #block-button{
+            margin: 15% auto;
+            display: block;
+        }
+    
+        
+    }
+
+    @media (min-width: 1200px) {
+
+        #content-buttons{
+
+            position: absolute;
+            margin: auto;
+            
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: auto;
+            height: auto;
+            
+        }
+    
+        #block-button{
+            margin: 10% auto;
+            display: block;
+        }
+    
+        
+    }
+
 }
