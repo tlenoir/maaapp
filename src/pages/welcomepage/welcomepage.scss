@@ -1,3 +1,32 @@
 page-welcomepage {
+    
+    .bgColor {
+        background: linear-gradient(to bottom,#242423,#161241);
+    } 
 
+    .place {
+        
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+    .progresse {
+        margin-top: 100px;
+    }
+
+    #progressbar {
+    background-color: #494747;
+    border-radius: 13px; /* (height of inner div) / 2 + padding */
+    padding: 3px;
+    }
+    
+    #progressbar > div {
+        background: linear-gradient(to right, #63ecf1);
+        width: 0%; /* Adjust with JavaScript */
+        height: 10px;
+        border-radius: 10px;
+        transition-timing-function: ease;
+        -webkit-transition: width 2s; /* Safari */
+        transition: width 2s;
+    }
 }
