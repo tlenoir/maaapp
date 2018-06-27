@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 
-import { Http, Response } from '@angular/http';
+// import { Http, Response } from '@angular/http';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { Http, Response } from '@angular/http';
 export class TrAddMenuPage {
 
   private form: FormGroup;
-  dataInicial: Date;
+  dataInicial: any;
   maxDate: string;
   createMenu = 'http://groupe2.api/api/meal/create';
 
@@ -20,9 +20,7 @@ export class TrAddMenuPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     platform: Platform,
-    public formBuilder: FormBuilder,
-    private camera: Camera,
-    public http: Http) {
+    public formBuilder: FormBuilder) {
 
     platform.ready().then(() => {
 

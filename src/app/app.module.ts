@@ -21,6 +21,9 @@ import { Camera } from '@ionic-native/camera';
 import { PhonegapLocalNotification } from '@ionic-native/phonegap-local-notification';
 import { UserData } from "../providers/user-data";
 import { HttpClientModule } from '@angular/common/http';
+import { File } from '@ionic-native/file';
+import { FilePath } from '@ionic-native/file-path';
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,11 @@ import { HttpClientModule } from '@angular/common/http';
     SQLite,
     Camera,
     PhonegapLocalNotification,
-    UserData
+    UserData,
+    File,
+    FilePath,
+    FileTransfer,
+    FileTransferObject
   ]
 })
 export class AppModule {}
