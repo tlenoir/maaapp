@@ -1,4 +1,4 @@
-import { OnboardingPage } from './../onboarding/onboarding';
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
 
@@ -42,7 +42,7 @@ export class WelcomepagePage {
       console.log('progress', this.progress);
       if (counter == limit) {
         clearInterval(myInterval);//Clear c'est Stop/Arreter
-        this.navCtrl.push(OnboardingPage);
+        this.navCtrl.push(HomePage);
       }
     }, 1000);
   }

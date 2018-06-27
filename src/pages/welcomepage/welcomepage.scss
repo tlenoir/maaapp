@@ -1,7 +1,7 @@
 page-welcomepage {
     
     .bgColor {
-        background: linear-gradient(to bottom, #ff7300,#ff7300,#ffbb00,#ffbb00);
+        background: linear-gradient(to bottom,#242423,#161241);
     } 
 
     .place {
@@ -21,7 +21,7 @@ page-welcomepage {
     }
     
     #progressbar > div {
-        background: linear-gradient(to right, red, green);
+        background: linear-gradient(to right, #63ecf1);
         width: 0%; /* Adjust with JavaScript */
         height: 10px;
         border-radius: 10px;
