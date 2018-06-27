@@ -18,14 +18,14 @@ export class WelcomepagePage {
   progress = 0;
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
     public platform: Platform) {
-      this.platform.ready()
-        .then(() => {
-          this.redirectToOnBoarding();
-        });
-      
+    this.platform.ready()
+      .then(() => {
+        this.redirectToOnBoarding();
+      });
+
   }
 
   ionViewDidLoad() {
@@ -46,5 +46,7 @@ export class WelcomepagePage {
       }
     }, 1000);
   }
+
+  
 
 }
