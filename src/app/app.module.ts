@@ -18,6 +18,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SQLite } from '@ionic-native/sqlite';
 import { Camera } from '@ionic-native/camera';
+import { PhonegapLocalNotification } from '@ionic-native/phonegap-local-notification';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { Camera } from '@ionic-native/camera';
     ToastController,
     DateTime,
     SQLite,
-    Camera
+    Camera,
+    PhonegapLocalNotification
   ]
 })
 export class AppModule {}
