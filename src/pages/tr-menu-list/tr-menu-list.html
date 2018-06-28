@@ -23,9 +23,16 @@
 
     <ion-item *ngFor="let datatum of Datatums">
       <ion-avatar item-start>
-        <img src="assets/img/avatar-ts-woody.png">
+        <!-- <img src="assets/img/avatar-ts-woody.png"> -->
       </ion-avatar>
-      <h2>{{ datatum.name }}</h2>
+      <h2 class="title-name">{{ datatum.name }}</h2>
+
+      <button color="danger" ion-button icon-only (click)="deletePlat(datatum.id)">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+      <button color="danger" ion-button icon-only (click)="updatePlat(datatum.name)">
+        <ion-icon name="star"></ion-icon>
+      </button>
     </ion-item>
 
   </ion-list>

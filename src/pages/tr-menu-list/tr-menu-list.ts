@@ -15,6 +15,8 @@ export class TrMenuListPage {
   grosTableau: myMealsObject;
   Datatums: Datum[];
 
+  toppings;
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -50,6 +52,14 @@ export class TrMenuListPage {
         console.log("Jipé TRMENU", this.grosTableau.data);
       })
       .catch((e) => console.log('error', e));
+  }
+
+  deletePlat(id){
+    this.obso.deleteMeals(this.resultLogin.token, id)
+  }
+
+  updatePlat(name){
+    this.obso.updateMeals(this.resultLogin.token, name)
   }
 
 }
