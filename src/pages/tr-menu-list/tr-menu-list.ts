@@ -15,7 +15,7 @@ export class TrMenuListPage {
   resultLogin: Success;
   grosTableau: myMealsObject;
   Datatums: Datum[];
-
+  colorDefo: string = '#ffffff';
   toppings;
   newName: string;
 
@@ -69,7 +69,7 @@ export class TrMenuListPage {
 
 
   goToChangeName(id: number) {
-      this.navCtrl.push(ChangeNamePage, { theID: id, token: this.resultLogin.token, exitumLogin: this.resultLogin })
+    this.navCtrl.push(ChangeNamePage, { theID: id, token: this.resultLogin.token, exitumLogin: this.resultLogin })
   }
 
   loadingSupp() {
@@ -80,4 +80,11 @@ export class TrMenuListPage {
     loader.present();
   }
 
+  changeColor1() {
+    this.colorDefo = '#a4d694';
+  }
+
+  changeColor2() {
+    this.colorDefo = '#ddb584';
+  }
 }
