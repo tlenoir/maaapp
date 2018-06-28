@@ -33,7 +33,7 @@ export class WelcomepagePage {
   }
 
   redirectToOnBoarding() {
-    let limit = 8;
+    let limit = 3;
     let counter = 0;
     let myInterval = setInterval(() => {
       counter++;
@@ -42,7 +42,7 @@ export class WelcomepagePage {
       console.log('progress', this.progress);
       if (counter == limit) {
         clearInterval(myInterval);//Clear c'est Stop/Arreter
-        this.navCtrl.push(LoginPage);
+        this.navCtrl.setRoot(LoginPage);
       }
     }, 1000);
   }

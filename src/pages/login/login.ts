@@ -85,11 +85,11 @@ export class LoginPage {
 
                     if (this.userIsSucces.userstype_id == 1) {
 
-                        this.navCtrl.push(TrMenuListPage, { exitumLogin: this.userIsSucces })
+                        this.navCtrl.setRoot(TrMenuListPage, { exitumLogin: this.userIsSucces })
 
                     } else if (this.userIsSucces.userstype_id == 2) {
 
-                        this.navCtrl.push(ColWeekListPage, { exitumLogin: this.userIsSucces })
+                        this.navCtrl.setRoot(ColWeekListPage, { exitumLogin: this.userIsSucces })
 
                     } else {
 

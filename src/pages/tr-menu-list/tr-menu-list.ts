@@ -63,7 +63,7 @@ export class TrMenuListPage {
 
 
   goToChangeName(id: number){
-    this.navCtrl.push(ChangeNamePage, {theID: id, token: this.resultLogin.token})
+    this.navCtrl.push(ChangeNamePage, {theID: id, token: this.resultLogin.token, exitumLogin: this.resultLogin})
   }
 
 }
