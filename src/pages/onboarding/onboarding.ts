@@ -4,18 +4,12 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { Component } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
 
-/**
- * Generated class for the OnboardingPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @Component({
   selector: 'page-onboarding',
   templateUrl: 'onboarding.html',
 })
 export class OnboardingPage {
+  goHome: string = "Start";
 
   database: SQLiteObject;
   skipMsg: string = "Skip";
