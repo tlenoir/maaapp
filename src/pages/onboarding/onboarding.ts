@@ -1,5 +1,4 @@
 import { LoginPage } from './../login/login';
-import { HomePage } from './../home/home';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { Component } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
