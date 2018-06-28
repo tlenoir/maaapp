@@ -5,13 +5,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 // import { ColDaysListPage } from '../pages/col-days-list/col-days-list';
 
-import { LoginPage } from '../pages/login/login'
+import { TrMenuListPage } from '../pages/tr-menu-list/tr-menu-list'
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = LoginPage;
+  rootPage:any = TrMenuListPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
