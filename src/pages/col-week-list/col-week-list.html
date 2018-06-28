@@ -15,11 +15,25 @@
 
 <ion-content class="card-background-page">
 
+    <ion-item *ngFor="let xyz of mealById">
+        {{xyz.meal_id}} {{xyz.meal}}
+      </ion-item>
 
+
+  <!-- <ion-label>Choisir sa date</ion-label>
+
+    <form [formGroup]="form" (ngSubmit)="logForm()">
   <h3>Date</h3>
-    <ion-item class="card">
-      <ion-input placeholder="Choisissez votre date" [value]="dataInicial | date:'dd/MM/yyyy'" (click)="open()" text-center></ion-input>
-    </ion-item>
+  <ion-item class="card">
+    <ion-input placeholder="Choisissez votre date" [value]="dataInicial | date:'yyyy/MM/dd'" (click)="open()" text-center></ion-input>
+  </ion-item>
+
+  <ion-item no-lines hidden="true" class="card">
+    <ion-datetime #datePicker displayFormat="DDDD DD MMMM YYYY" formControlName="date" (ionCancel)="this.dataInicial  = null"
+      [(ngModel)]="dataInicial" doneText="Ok" cancelText="Annulé" [max]="maxDate">
+    </ion-datetime>
+  </ion-item>
+</form> -->
 
 
 

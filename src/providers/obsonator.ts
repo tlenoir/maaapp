@@ -14,13 +14,13 @@ export class ObsonatorProvider {
 
   // http://groupe2.motjo.io/api/
 
-  urlMyMeals = 'http://groupe2.api/api/traiteur/myMeals';
-  urlCreateMeal = 'http://groupe2.api/api/meal/create';
-  urlDeleteMeal = 'http://groupe2.api/api/meal/';
-  urlUpdateMeal = 'http://groupe2.api/api/meal';
-  urlMenu = 'http://groupe2.api/api/menu/create';
-  urlUpdateMenu = 'http://groupe2.api/api/menu';
-  urlDeleteMenu = 'http://groupe2.api/api/menu/';
+  urlMyMeals = 'http://groupe2.motjo.io/api/traiteur/myMeals';
+  urlCreateMeal = 'http://groupe2.motjo.io/api/meal/create';
+  urlDeleteMeal = 'http://groupe2.motjo.io/api/meal/';
+  urlUpdateMeal = 'http://groupe2.motjo.io/api/meal';
+  urlMenu = 'http://groupe2.motjo.io/api/menu/create';
+  urlUpdateMenu = 'http://groupe2.motjo.io/api/menu';
+  urlDeleteMenu = 'http://groupe2.motjo.io/api/menu/';
 
   creatorMeal: createMeal;
   creatorMenu: menuObject;
