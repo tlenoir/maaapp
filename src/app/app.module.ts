@@ -72,7 +72,9 @@ import { ContributorProvider } from '../providers/contributor';
     FilePath,
     FileTransfer,
     ObsonatorProvider,
-    ContributorProvider
+    ContributorProvider,
+    ToastController,
+    PhonegapLocalNotification
   ]
 })
 export class AppModule {}
