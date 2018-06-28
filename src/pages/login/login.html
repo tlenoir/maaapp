@@ -5,20 +5,22 @@
   Ionic pages and navigation.
 -->
 <ion-header *ngIf="!ngif">
-    <ion-title>Connecte toi !!!</ion-title>
+    <ion-title>Connecte-toi !!!</ion-title>
 </ion-header>
 
 
-<ion-content  class="bgimg"  padding>
+<ion-content class="bgimg" padding>
 
     <div *ngIf="!ngif">
 
         <form #loginForm="ngForm" novalidate>
-            <ion-list no-lines><br><br>
+            <ion-list no-lines>
+                <br>
+                <br>
                 <ion-item class="card">
-                    <ion-label  class="card" id="item-label-username" stacked color="light">Nom d'utilisateur</ion-label>
-                    <ion-input class="item-input-user" [(ngModel)]="login.username"  class="card" name="username" type="text" #username="ngModel" spellcheck="false"
-                        placeholder="Utilsateur" autocapitalize="off"  required>
+                    <ion-label class="card" id="item-label-username" stacked color="light">Nom d'utilisateur</ion-label>
+                    <ion-input class="item-input-user" [(ngModel)]="login.username" class="card" name="username" type="text" #username="ngModel"
+                        spellcheck="false" placeholder="Utilsateur" autocapitalize="off" required>
                     </ion-input>
                 </ion-item>
                 <p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
@@ -27,15 +29,16 @@
 
                 <ion-item class="card">
                     <ion-label class="card" id="item-label-userpassword" stacked color="light">Mot de passe</ion-label>
-                    <ion-input class="item-input-user" [(ngModel)]="login.password" class="card" name="password" type="password" #password="ngModel" placeholder="Mot de passe"
-                        required>
+                    <ion-input class="item-input-user" [(ngModel)]="login.password" class="card" name="password" type="password" #password="ngModel"
+                        placeholder="Mot de passe" required>
                     </ion-input>
                 </ion-item>
                 <p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
-                    Le mot de passe est requis !
+                    Le mot de passe est aussi requis !
                 </p>
             </ion-list>
-            <br><br>
+            <br>
+            <br>
             <ion-row responsive-sm>
                 <ion-col>
                     <button ion-button outline (click)="onLogin(loginForm)" type="submit" block>Go !</button>

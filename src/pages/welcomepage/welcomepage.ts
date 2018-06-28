@@ -33,7 +33,7 @@ export class WelcomepagePage {
   }
 
   redirectToOnBoarding() {
-    let limit = 4;
+    let limit = 8;
     let counter = 0;
     let myInterval = setInterval(() => {
       counter++;
