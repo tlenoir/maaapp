@@ -1,5 +1,8 @@
-page-tr-menu-list {}
-
+page-tr-menu-list {
+ion-content {
+  background-image: url('../../assets/imgs/fnd1.jpg');
+  background-size: cover;
+}
 .list-avatar-page {
   ion-note {
     font-size: 12px;
@@ -10,4 +13,6 @@ page-tr-menu-list {}
   .title-name{
     display: inline-block
   }
+
+}
 }
