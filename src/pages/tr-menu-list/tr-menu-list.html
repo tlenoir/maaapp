@@ -1,7 +1,7 @@
 <ion-header >
 
-  <ion-navbar>
-    <ion-title>Menu Hebdomadaire</ion-title>
+  <ion-navbar color="light" transparent>
+    <ion-title>Liste des Plats</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -27,15 +27,25 @@
   </ion-list> -->
 
   <ion-list no-lines>
+<<<<<<< HEAD
     <ion-item-sliding *ngFor="let datatum of Datatums" style="background:transparent;">
       <ion-item>
         <ion-avatar item-start>
+=======
+    <ion-item-sliding *ngFor="let datatum of Datatums" >
+      <ion-item transparent>
+        <!-- <ion-avatar item-start>
+>>>>>>> 6fa14034dab2e6535e1f124a86c67e10e4c79baa
           <img src="../../assets/imgs/logo.png">
-        </ion-avatar>
+        </ion-avatar> -->
         <h2>{{ datatum.name }}</h2>
       </ion-item>
       <ion-item-options side="right">
+<<<<<<< HEAD
         <button ion-button clear (click)="updatePlat(datatum.name)">
+=======
+        <button ion-button color="primary" (click)="goToChangeName(datatum.id)">
+>>>>>>> 6fa14034dab2e6535e1f124a86c67e10e4c79baa
           <ion-icon name="create"></ion-icon>
           Modif
         </button>
@@ -43,6 +53,10 @@
           <ion-icon name="trash"></ion-icon>
           Delete
         </button>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 6fa14034dab2e6535e1f124a86c67e10e4c79baa
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>

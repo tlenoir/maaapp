@@ -12,6 +12,8 @@ import { createMeal } from './model/myMeals';
 @Injectable()
 export class ObsonatorProvider {
 
+  // http://groupe2.motjo.io/api/
+
   urlMyMeals = 'http://groupe2.api/api/traiteur/myMeals';
   urlCreateMeal = 'http://groupe2.api/api/meal/create';
   urlDeleteMeal = 'http://groupe2.api/api/meal/';

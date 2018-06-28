@@ -33,7 +33,7 @@ export class ColDaysListPage {
     }
 
     this.toastInstance = this.toastCtrl.create({
-      message: 'User was added successfully',
+      message: 'Bon ça !',
       showCloseButton: true,
       /* position: 'top' */
       closeButtonText: 'Ok'

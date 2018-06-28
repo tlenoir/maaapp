@@ -29,9 +29,10 @@ export class TrAddMenuPage {
     platform.ready().then(() => {
 
       this.form = this.formBuilder.group({
-        title: ['', Validators.required],
-        description: ['', Validators.required],
-        date: ['', Validators.required],
+        title: ['', Validators.required]
+        // ,
+        // description: ['', Validators.required],
+        // date: ['', Validators.required],
       });
 
     });
@@ -65,6 +66,7 @@ export class TrAddMenuPage {
 
   addPlat() {
     this.obso.createMeals(this.resultLogin.token,this.form.value.title)
+    this.navCtrl.setRoot(TrAddMenuPage)
   }
 
 }

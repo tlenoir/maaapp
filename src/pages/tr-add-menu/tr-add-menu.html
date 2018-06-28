@@ -1,7 +1,7 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Menu</ion-title>
+  <ion-navbar color="light" transparent>
+    <ion-title>Créer un Plat</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -11,12 +11,12 @@
 
   <form [formGroup]="form" (ngSubmit)="logForm()">
 
-    <h3>Nom du plat</h3>
+    <h3 color="dark">Nom du plat</h3>
     <ion-item class="card">
       <ion-input type="text" formControlName="title" placeholder="Entrez le nom du plat" text-center></ion-input>
     </ion-item>
 
-    <h3>Date</h3>
+    <!-- <h3>Date</h3>
     <ion-item class="card">
       <ion-input placeholder="Choisissez votre date" [value]="dataInicial | date:'dd/MM/yyyy'" (click)="open()" text-center></ion-input>
     </ion-item>
@@ -30,7 +30,7 @@
     <h3>Description</h3>
     <ion-item class="card">
       <ion-textarea formControlName="description" placeholder="Entrez la description" text-center></ion-textarea>
-    </ion-item>
+    </ion-item> -->
 
     <ion-item class="card" no-lines>
       <button ion-button outline color="dark" text-center type="submit" [disabled]="!form.valid" item-end>Ajouter</button>
