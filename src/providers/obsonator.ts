@@ -13,6 +13,7 @@ export class ObsonatorProvider {
 
   urlMyMeals = 'http://groupe2.api/api/traiteur/myMeals';
   urlCreate = 'http://groupe2.api/api/meal/create';
+  urlDelete = 'http://groupe2.api/api/meal/'
 
   creator: createMeal;
 
@@ -60,11 +61,26 @@ export class ObsonatorProvider {
     let HeaderConfig = {'Authorization': 'Bearer '+token, 'Content-Type': 'application/x-www-form-urlencoded'}
 
     return new Promise(resolve => {
-      this.http.post(this.urlCreate, this.creator, {
+      this.http.put(this.urlCreate, this.creator, {
         headers: HeaderConfig,
         params: new HttpParams().set('name', name)
       })
         .subscribe(res => {
+          resolve(res);
+        }, (err) => {
+          console.log(err);
+        });
+    })
+  }
+
+  deleteMeals(token: string, id: number) {
+
+    return new Promise(resolve => {
+      this.http.delete(this.urlDelete+id, {
+        headers: new HttpHeaders().set('Authorization', 'Bearer ' + token)
+      })
+        .subscribe(res => {
+          console.log('delete',res)
           resolve(res);
         }, (err) => {
           console.log(err);
