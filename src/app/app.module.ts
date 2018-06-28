@@ -24,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { File } from '@ionic-native/file';
 import { FilePath } from '@ionic-native/file-path';
 import { FileTransfer } from '@ionic-native/file-transfer';
+import { ObsonatorProvider } from '../providers/obsonator';
+import { ContributorProvider } from '../providers/contributor';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,9 @@ import { FileTransfer } from '@ionic-native/file-transfer';
     UserData,
     File,
     FilePath,
-    FileTransfer
+    FileTransfer,
+    ObsonatorProvider,
+    ContributorProvider
   ]
 })
 export class AppModule {}
