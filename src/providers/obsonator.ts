@@ -12,7 +12,7 @@ import { createMeal } from './model/myMeals';
 export class ObsonatorProvider {
 
   urlMyMeals = 'http://groupe2.api/api/traiteur/myMeals';
-  urlCreate = 'http://groupe1.api/api/meal/create';
+  urlCreate = 'http://groupe2.api/api/meal/create';
 
   creator: createMeal;
 
@@ -44,7 +44,7 @@ export class ObsonatorProvider {
 
     return new Promise(resolve => {
       this.http.post(this.urlCreate, this.creator, {
-        headers: new HttpHeaders().set('Authorization', 'Bearer' + token),
+        headers: new HttpHeaders().set('Authorization', 'Bearer ' + token),
         params: new HttpParams().set('name', name)
       })
         .subscribe(res => {
@@ -53,12 +53,23 @@ export class ObsonatorProvider {
           console.log(err);
         });
     })
-}
+  }
 
+  updateMeals(token: string, name: string) {
 
-  // private op: obpro
+    let HeaderConfig = {'Authorization': 'Bearer '+token, 'Content-Type': 'application/x-www-form-urlencoded'}
 
-
-  // this.op.getMyMeals(token)
+    return new Promise(resolve => {
+      this.http.post(this.urlCreate, this.creator, {
+        headers: HeaderConfig,
+        params: new HttpParams().set('name', name)
+      })
+        .subscribe(res => {
+          resolve(res);
+        }, (err) => {
+          console.log(err);
+        });
+    })
+  }
 
 }
