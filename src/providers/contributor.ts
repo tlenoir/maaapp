@@ -11,10 +11,10 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ContributorProvider {
 
-  urlMenuGet = 'http://groupe2.api/api/menuFrom/';
-  urlCreateOrder = 'http://groupe2.api/api/order/create';
-  urlDeleteOrder = 'http://groupe2.api/api/menu/';
-  urlGetOrder = 'http://groupe2.api/api/order/';
+  urlMenuGet = 'http://groupe2.motjo.io/api/menuFrom/';
+  urlCreateOrder = 'http://groupe2.motjo.io/api/order/create';
+  urlDeleteOrder = 'http://groupe2.motjo.io/api/menu/';
+  urlGetOrder = 'http://groupe2.motjo.io/api/order/';
 
   creatorOrder: menuGetObject;
 
@@ -25,7 +25,7 @@ export class ContributorProvider {
   getMenuByDate(token: string, date: string){
 
     return new Promise(resolve => {
-      this.http.get(this.urlMenuGet, {
+      this.http.get(this.urlMenuGet+date, {
         headers: new HttpHeaders().set('Authorization', 'Bearer ' + token)
       }).subscribe(data => {
         resolve(data);
