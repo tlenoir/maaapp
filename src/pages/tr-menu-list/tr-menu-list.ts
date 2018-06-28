@@ -4,6 +4,7 @@ import { Success } from '../../providers/model/login';
 import { TrAddMenuPage } from '../tr-add-menu/tr-add-menu';
 import { ObsonatorProvider } from '../../providers/obsonator';
 import { myMealsObject, Datum } from '../../providers/model/myMeals';
+import { ChangeNamePage } from '../change-name/change-name';
 
 @Component({
   selector: 'page-tr-menu-list',
@@ -16,6 +17,7 @@ export class TrMenuListPage {
   Datatums: Datum[];
 
   toppings;
+  newName: string;
 
   constructor(
     public navCtrl: NavController,
@@ -58,8 +60,9 @@ export class TrMenuListPage {
     this.obso.deleteMeals(this.resultLogin.token, id)
   }
 
-  updatePlat(name){
-    this.obso.updateMeals(this.resultLogin.token, name)
+
+  goToChangeName(id: number){
+    this.navCtrl.push(ChangeNamePage, {theID: id, token: this.resultLogin.token})
   }
 
 }
