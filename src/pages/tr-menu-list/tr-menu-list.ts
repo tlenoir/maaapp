@@ -61,14 +61,9 @@ export class TrMenuListPage {
     this.obso.deleteMeals(this.resultLogin.token, id)
   }
 
-<<<<<<< HEAD
-  updatePlat(name) {
-    this.obso.updateMeals(this.resultLogin.token, name)
-=======
 
   goToChangeName(id: number){
     this.navCtrl.push(ChangeNamePage, {theID: id, token: this.resultLogin.token})
->>>>>>> a4f229ae85056c419be6e75457b3febdc32277a2
   }
 
 }
