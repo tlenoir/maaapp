@@ -1,18 +1,22 @@
 page-tr-menu-list {
-ion-content {
-  background-image: url('../../assets/imgs/fnd1.jpg');
-  background-size: cover;
-}
-.list-avatar-page {
-  ion-note {
-    font-size: 12px;
-    align-self: flex-start;
-    margin-top: 14px;
+  ion-content {
+    background-image: url('../../assets/imgs/fnd1.jpg');
+    background-size: cover;
   }
-
-  .title-name{
-    display: inline-block
+  .list-avatar-page {
+    ion-note {
+      font-size: 12px;
+      align-self: flex-start;
+      margin-top: 14px;
+    }
+    .title-name {
+      display: inline-block
+    }
   }
-
-}
+  .list .item, .list .item-complex .item-content {
+    background: #fff0;
+  }
+  .item .item-content.activated {
+    background-color: rgb(150, 137, 120);
+  }
 }

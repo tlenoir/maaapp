@@ -27,7 +27,7 @@
   </ion-list> -->
 
   <ion-list no-lines>
-    <ion-item-sliding *ngFor="let datatum of Datatums">
+    <ion-item-sliding *ngFor="let datatum of Datatums" style="background:transparent;">
       <ion-item>
         <ion-avatar item-start>
           <img src="../../assets/imgs/logo.png">
@@ -35,15 +35,14 @@
         <h2>{{ datatum.name }}</h2>
       </ion-item>
       <ion-item-options side="right">
-        <button ion-button color="primary" (click)="updatePlat(datatum.name)">
+        <button ion-button clear (click)="updatePlat(datatum.name)">
           <ion-icon name="create"></ion-icon>
           Modif
         </button>
-        <button ion-button color="light" (click)="deletePlat(datatum.id)">
+        <button ion-button clear (click)="deletePlat(datatum.id)">
           <ion-icon name="trash"></ion-icon>
           Delete
         </button>
-        <ion-checkbox color="dark" checked="true"></ion-checkbox>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
