@@ -1,3 +1,5 @@
+import { Success } from './../../providers/model/login';
+import { Datum, myMealsObject } from './../../providers/model/myMeals';
 import { Component } from "@angular/core";
 import { NavController, NavParams, ToastController, Toast } from "ionic-angular";
 
@@ -16,14 +18,22 @@ import { NavController, NavParams, ToastController, Toast } from "ionic-angular"
 })
 export class ColDaysListPage {
 
+  resultLogin: Success;
+  Datatums: Datum[];
+  grosTableau: myMealsObject;
+
   private toastInstance: Toast;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
   ) {
 
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ColDaysListPage');
   }
 
   presentToast() {
