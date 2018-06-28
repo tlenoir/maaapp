@@ -18,6 +18,7 @@ export class TrMenuListPage {
   colorDefo: string = '#ffffff';
   toppings;
   newName: string;
+  ionicNamedColor: string = 'light';
 
   constructor(
     public navCtrl: NavController,
@@ -80,11 +81,12 @@ export class TrMenuListPage {
     loader.present();
   }
 
-  changeColor1() {
-    this.colorDefo = '#a4d694';
+  toggleNamedColor(): void {
+    if(this.ionicNamedColor === 'light') {
+      this.ionicNamedColor = 'primary'
+    } else {
+      this.ionicNamedColor = 'light'
+    }
   }
 
-  changeColor2() {
-    this.colorDefo = '#ddb584';
-  }
 }
