@@ -11,5 +11,3 @@ export interface loginModel {
     success: Success;
 }
 
-
-

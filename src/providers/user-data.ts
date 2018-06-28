@@ -14,6 +14,7 @@ export class UserData {
   HAS_SEEN_TUTORIAL = 'hasSeenTutorial';
 
   urlLogin = 'http://groupe2.api/api/login';
+  urlCreate = 'http://groupe2.api/api/register'
   // groupe2.api/api/login?email=tlenoir.tcc@gmail.com&password=azerty
 
   constructor(
@@ -44,6 +45,20 @@ export class UserData {
 
     return this.http.post(this.urlLogin + email + username + passwd + password, login)
     
+  };
+
+  // http://groupe2.api/api/register?fname=Christophe&lname=Pezar&email=cpezar@gmail.com&password=azerty&c_password=azerty&userstype_id=2
+  create(fname: string, lname: string, email: string, password: string, c_password: string, userType_id: any, login: loginModel) {
+
+    let fn = '?fname='
+    let ln = '&lname='
+    let em = '&email='
+    let pass = '&password='
+    let cPass = '&c_password='
+    let userType = '&userstype_id='
+
+    /* return this.http.post(this.urlCreate + fname + lname + email + password + c_password + userType_id, login ) */
+    console.log(this.urlCreate + fn + fname + ln + lname + em + email + pass + password + cPass + c_password + userType + userType_id, login )
   };
 
   // signup(username: string): void {

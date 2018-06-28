@@ -72,7 +72,8 @@ import { ContributorProvider } from '../providers/contributor';
     FilePath,
     FileTransfer,
     ObsonatorProvider,
-    ContributorProvider
+    ContributorProvider,
+    ToastController
   ]
 })
 export class AppModule {}

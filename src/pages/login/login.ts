@@ -93,7 +93,7 @@ export class LoginPage {
 
                     } else {
 
-                        console.log('is an Assistante bro:', this.userIsSucces.userstype_id)
+                        this.navCtrl.push(HomePage, { exitumLogin: this.userIsSucces })
 
                     }
 

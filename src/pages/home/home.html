@@ -1,25 +1,96 @@
 <ion-header>
-<<<<<<< HEAD
   <ion-navbar>
     <ion-title>
-      Assitante Room
+      Assistante Room
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
- 
-  
-    <button ion-button block full>AJOUTER TRAITEUR</button>
-    <button ion-button block full>AJOUTER COLABORATEUR</button>
- 
-=======
-</ion-header>
 
-<ion-content padding>
-  <ion-buttons id="content-buttons">
-    <button id="block-button" class="caterer" ion-button color="secondary" round (click)="goToLoginPage('Traiteur')" >Traiteur</button>
-    <button id="block-button" class="colab" ion-button color="secondary" round (click)="goToLoginPage('Collaborateur')">Collaborateur</button>
-  </ion-buttons>
->>>>>>> 442a3d839ee86b79b82f9e15996ab49c59a738d3
+
+  <ion-label>INTEGRATION DES DIFFERENTS UTILISATEURS</ion-label>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Prénom d'Utilisateur</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Nom d'Utilisateur</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Mot de Passe</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Confirmer Mot de Passe</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Type d'Utilisateur</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <!-- Carte explicative -->
+  <ion-card>
+
+    <!-- <img src="assets/icon/favicon.png"/> -->
+
+    <ion-card-content>
+      <ion-card-title>
+        FICHE DESCRIPTIVE D'UTILISATION
+      </ion-card-title>
+      <p>
+        Prénom d'Utilisateur : Mettre le
+        <b>
+          <i>prénom</i>
+        </b> de l'utilisateur concerné
+      </p>
+      <p>
+        Nom d'Utilisateur: Mettre le
+        <b>
+          <i>nom</i>
+        </b> de l'utilisateur concerné
+      </p>
+      <p>
+        Type d'Utilisateur:
+        <i>
+          <b>1</b>
+        </i> pour les traiteurs,
+        <i>
+          <b>2</b>
+        </i> pour les collaborateurs et
+        <i>
+          <b>3</b>
+        </i> pour les assistants.
+      </p>
+      <p> ENJOY !</p>
+    </ion-card-content>
+
+  </ion-card>
+
 </ion-content>
+
+<ion-footer>
+    <ion-navbar>
+  <ion-label>
+    ACCÈS AUX DIFFÉRENTES SECTIONS
+  </ion-label>
+    <ion-row>
+      <ion-col>
+        <button ion-button full color='danger' (tap)="launchTraiteur()" round>Traiteurs</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button full color='secondary' (tap)="launchColabo()" round>Collaborateurs</button>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-footer>
