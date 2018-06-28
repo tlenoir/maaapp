@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component } from "@angular/core";
+import { NavController, NavParams, ToastController, Toast } from "ionic-angular";
 
 /**
  * Generated class for the ColDaysListPage page.
@@ -8,17 +8,42 @@ import { NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
+
+
 @Component({
-  selector: 'page-col-days-list',
-  templateUrl: 'col-days-list.html',
+  selector: "page-col-days-list",
+  templateUrl: "col-days-list.html"
 })
 export class ColDaysListPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private toastInstance: Toast;
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public toastCtrl: ToastController
+  ) {
+
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ColDaysListPage');
-  }
+  presentToast() {
 
+    if(this.toastInstance) {
+      return;
+    }
+
+    this.toastInstance = this.toastCtrl.create({
+      message: 'Bon ça !',
+      showCloseButton: true,
+      /* position: 'top' */
+      closeButtonText: 'Ok'
+    });
+      this.toastInstance.present();
+
+    this.toastInstance.onDidDismiss(() => {
+      this.toastInstance = null;
+    });
+
+    this.toastInstance.present();
+  }
 }
