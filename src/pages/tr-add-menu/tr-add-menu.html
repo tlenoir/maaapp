@@ -1,40 +1,42 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Menu</ion-title>
+  <ion-navbar transparent>
+    <ion-title>
+      <h2>CRÉER UN PLAT</h2>
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding text-center>
 
   <form [formGroup]="form" (ngSubmit)="logForm()">
+    <div style="padding-top: 200px;">
+      <h3>Nom du plat</h3>
+    </div>
 
-    <h3>Nom du plat</h3>
-    <ion-item>
+    <ion-item class="card">
       <ion-input type="text" formControlName="title" placeholder="Entrez le nom du plat" text-center></ion-input>
     </ion-item>
 
-    <h3>Date</h3>
-    <ion-item>
+    <!-- <h3>Date</h3>
+    <ion-item class="card">
       <ion-input placeholder="Choisissez votre date" [value]="dataInicial | date:'dd/MM/yyyy'" (click)="open()" text-center></ion-input>
     </ion-item>
 
-    <ion-item no-lines hidden="true">
-      <ion-datetime #datePicker displayFormat="DDDD DD MMMM YYYY" formControlName="date" (ionCancel)="this.dataInicial  = null" [(ngModel)]="dataInicial"
-        doneText="Ok" cancelText="Annulé" [max]="maxDate">
+    <ion-item no-lines hidden="true" class="card">
+      <ion-datetime #datePicker displayFormat="DDDD DD MMMM YYYY" formControlName="date" (ionCancel)="this.dataInicial  = null"
+        [(ngModel)]="dataInicial" doneText="Ok" cancelText="Annulé" [max]="maxDate">
       </ion-datetime>
     </ion-item>
 
     <h3>Description</h3>
-    <ion-item>
+    <ion-item class="card">
       <ion-textarea formControlName="description" placeholder="Entrez la description" text-center></ion-textarea>
-    </ion-item>
-
-    <ion-item no-lines>
-      <button ion-button large color="secondary" type="submit" [disabled]="!form.valid" item-end>Ajouter</button>
-    </ion-item>
+    </ion-item> -->
+    <div style="padding-top: 300px;">
+      <ion-item class="card" no-lines>
+        <button ion-button block large color="dark" type="submit" [disabled]="!form.valid">Ajouter</button>
+      </ion-item>
+    </div>
 
   </form>
 

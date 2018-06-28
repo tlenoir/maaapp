@@ -26,6 +26,7 @@ import { FilePath } from '@ionic-native/file-path';
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { ObsonatorProvider } from '../providers/obsonator';
 import { ContributorProvider } from '../providers/contributor';
+import { ChangeNamePage } from '../pages/change-name/change-name';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ContributorProvider } from '../providers/contributor';
     OnboardingPage,
     TrAddMenuPage,
     TrMenuListPage,
-    WelcomepagePage
+    WelcomepagePage,
+    ChangeNamePage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { ContributorProvider } from '../providers/contributor';
     OnboardingPage,
     TrAddMenuPage,
     TrMenuListPage,
-    WelcomepagePage
+    WelcomepagePage,
+    ChangeNamePage
   ],
   providers: [
     StatusBar,
@@ -73,7 +76,8 @@ import { ContributorProvider } from '../providers/contributor';
     FileTransfer,
     ObsonatorProvider,
     ContributorProvider,
-    ToastController
+    ToastController,
+    PhonegapLocalNotification
   ]
 })
 export class AppModule {}

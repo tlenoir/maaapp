@@ -1,32 +1,30 @@
 page-welcomepage {
-    
-    .bgColor {
-        background: linear-gradient(to bottom,#242423,#161241);
-    } 
-
-    .place {
-        
-        width: 60%;
-        margin: 0 auto;
-    }
-    
-    .progresse {
-        margin-top: 100px;
-    }
-
-    #progressbar {
-    background-color: #494747;
-    border-radius: 13px; /* (height of inner div) / 2 + padding */
+  .bgimg {
+    background-image: url('../../assets/imgs/fnd1.jpg');
+    background-size: cover;
+  }
+  .place {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .progresse {
+    margin-top: 100px;
+  }
+  #progressbar {
+    background-color: #000000;
+    border-radius: 13px;
+    /* (height of inner div) / 2 + padding */
     padding: 3px;
-    }
-    
-    #progressbar > div {
-        background: linear-gradient(to right, #ff3467);
-        width: 0%; /* Adjust with JavaScript */
-        height: 10px;
-        border-radius: 10px;
-        transition-timing-function: ease;
-        -webkit-transition: width 2s; /* Safari */
-        transition: width 2s;
-    }
+  }
+  #progressbar>div {
+    background: linear-gradient(to right, #11d3f5);
+    width: 0%;
+    /* Adjust with JavaScript */
+    height: 10px;
+    border-radius: 10px;
+    transition-timing-function: ease;
+    -webkit-transition: width 2s;
+    /* Safari */
+    transition: width 2s;
+  }
 }

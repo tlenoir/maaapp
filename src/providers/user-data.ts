@@ -57,8 +57,8 @@ export class UserData {
     let cPass = '&c_password='
     let userType = '&userstype_id='
 
-    /* return this.http.post(this.urlCreate + fname + lname + email + password + c_password + userType_id, login ) */
-    console.log(this.urlCreate + fn + fname + ln + lname + em + email + pass + password + cPass + c_password + userType + userType_id, login )
+    return this.http.post(this.urlCreate + fn + fname + ln + lname + em + email + pass + password + cPass + c_password + userType + userType_id, login)
+    /* console.log(this.urlCreate + fn + fname + ln + lname + em + email + pass + password + cPass + c_password + userType + userType_id, login ) */
   };
 
   // signup(username: string): void {

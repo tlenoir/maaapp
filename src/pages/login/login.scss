@@ -1,20 +1,22 @@
-page-login{
-
-    #item-label-userpassword{
-
-        font-size: 1em;
-        margin: auto;
-        padding-top: 2rem;
-    }
-    #item-label-username{
-
-        font-size: 1em;
-        margin: auto;
-        padding-top: 2rem;
-    }
-    .item-input-user{
-
-        
-    }
-    
+page-login {
+  #item-label-userpassword {
+    font-size: 1em;
+    margin: auto;
+    padding-top: 2rem;
+  }
+  #item-label-username {
+    font-size: 1em;
+    margin: auto;
+    padding-top: 2rem;
+  }
+  .bgimg {
+    background-image: url('../../assets/imgs/fnd1.jpg');
+    background-size: cover;
+  }
+  .card {
+    background-color: transparent;
+  }
+  label {
+    font-size: 20px;
+  }
 }

@@ -1,4 +1,4 @@
-import { HomePage } from './../home/home';
+import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
 
@@ -33,7 +33,7 @@ export class WelcomepagePage {
   }
 
   redirectToOnBoarding() {
-    let limit = 10;
+    let limit = 3;
     let counter = 0;
     let myInterval = setInterval(() => {
       counter++;
@@ -42,7 +42,7 @@ export class WelcomepagePage {
       console.log('progress', this.progress);
       if (counter == limit) {
         clearInterval(myInterval);//Clear c'est Stop/Arreter
-        this.navCtrl.push(HomePage);
+        this.navCtrl.setRoot(LoginPage);
       }
     }, 1000);
   }

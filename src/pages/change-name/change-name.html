@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar transparent>
+    <ion-title>
+      <h2>CHANGEZ LE NOM</h2>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center>
+  <div style="padding-top: 200px;">
+    <ion-item class="card">
+      <ion-label id="item-label-changeName" stacked text-center style="font-size: 120%">Nouveau Nom</ion-label>
+      <ion-input class="item-input-enterNewName" [(ngModel)]="newName" name="username" type="text" spellcheck="false" placeholder="Entrez le nouveau nom"
+        autocapitalize="off" required>
+      </ion-input>
+    </ion-item>
+  </div>
+
+  <div style="padding-top: 300px;">
+    <button ion-button block large color="dark" (click)="updatePlat()">Changer</button>
+  </div>
+
+</ion-content>

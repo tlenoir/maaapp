@@ -1,13 +1,19 @@
-page-tr-menu-list {}
-
-.list-avatar-page {
-  ion-note {
-    font-size: 12px;
-    align-self: flex-start;
-    margin-top: 14px;
+page-tr-menu-list {
+  ion-content {
+    background-image: url('../../assets/imgs/fnd1.jpg');
+    background-size: cover;
   }
-
-  .title-name{
-    display: inline-block
+  .list-avatar-page {
+    ion-note {
+      font-size: 12px;
+      align-self: flex-start;
+      margin-top: 14px;
+    }
+    .title-name {
+      display: inline-block
+    }
+  }
+  .list .item,.list .item-complex .item-content {
+    background: #fff0;
   }
 }

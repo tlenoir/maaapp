@@ -7,12 +7,50 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>col-week-list</ion-title>
+    <ion-title>MA SEMAINE</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="card-background-page">
+
+
+  <h3>Date</h3>
+    <ion-item class="card">
+      <ion-input placeholder="Choisissez votre date" [value]="dataInicial | date:'dd/MM/yyyy'" (click)="open()" text-center></ion-input>
+    </ion-item>
+
+
+
+  <!-- <ion-card>
+    <img src="../../assets/imgs/spaghetti.jpg" />
+    <div class="card-title">Menu1</div>
+    <div class="card-subtitle">Menu1</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/imgs/spaghetti.jpg" />
+    <div class="card-title">Menu2</div>
+    <div class="card-subtitle">Menu2</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/imgs/spaghetti.jpg" />
+    <div class="card-title">Menu3</div>
+    <div class="card-subtitle">Menu3</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/imgs/spaghetti.jpg" />
+    <div class="card-title">Menu4</div>
+    <div class="card-subtitle">Menu4</div>
+  </ion-card> -->
 
 </ion-content>
+
+<ion-footer position="bottom">
+
+  <button ion-button round outline center (click)="launchDaysPage()"> C'est çà que je veux !</button>
+
+</ion-footer>
