@@ -1,14 +1,7 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { ObsonatorProvider } from '../../providers/obsonator';
 import { TrMenuListPage } from '../tr-menu-list/tr-menu-list';
-
-/**
- * Generated class for the ChangeNamePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-change-name',
@@ -21,29 +14,42 @@ export class ChangeNamePage {
   all;
   newName;
 
-  constructor(public navCtrl: NavController, 
+  constructor(
+    public navCtrl: NavController,
     public navParams: NavParams,
-  private obso: ObsonatorProvider) {
+    private obso: ObsonatorProvider,
+    public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChangeNamePage');
   }
 
-  ionViewWillEnter(){
+  ionViewWillEnter() {
 
     this.idToChangeName = this.navParams.get('theID')
     this.tokenByUser = this.navParams.get('token')
     this.all = this.navParams.get('exitumLogin')
-    
+
 
     console.log('id', this.idToChangeName)
-   
+
   }
 
-  updatePlat(){
+  updatePlat() {
     this.obso.updateMeals(this.tokenByUser, this.newName, this.idToChangeName)
-    this.navCtrl.setRoot(TrMenuListPage, {exitumLogin: this.all});
+    this.loadingModif()
+    setTimeout(() => {
+      this.navCtrl.setRoot(TrMenuListPage, { exitumLogin: this.all });
+    }, 2100);
+  }
+
+  loadingModif() {
+    const loader = this.loadingCtrl.create({
+      content: "Modif en cours...",
+      duration: 2000
+    });
+    loader.present();
   }
 
 }

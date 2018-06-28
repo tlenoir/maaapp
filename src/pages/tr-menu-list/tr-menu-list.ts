@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, Platform, AlertController } from 'ionic-angular';
+import { NavController, NavParams, Platform, AlertController, LoadingController } from 'ionic-angular';
 import { Success } from '../../providers/model/login';
 import { TrAddMenuPage } from '../tr-add-menu/tr-add-menu';
 import { ObsonatorProvider } from '../../providers/obsonator';
@@ -24,7 +24,8 @@ export class TrMenuListPage {
     public navParams: NavParams,
     platform: Platform,
     public obso: ObsonatorProvider,
-    public alertCtrl: AlertController) {
+    public alertCtrl: AlertController,
+    public loadingCtrl: LoadingController) {
 
     platform.ready().then(() => {
 
@@ -59,11 +60,24 @@ export class TrMenuListPage {
 
   deletePlat(id) {
     this.obso.deleteMeals(this.resultLogin.token, id)
+    this.loadingSupp()
+    setTimeout(() => {
+      this.navCtrl.setRoot(TrMenuListPage, { exitumLogin: this.resultLogin });
+    }, 2100);
+
   }
 
 
-  goToChangeName(id: number){
-    this.navCtrl.push(ChangeNamePage, {theID: id, token: this.resultLogin.token, exitumLogin: this.resultLogin})
+  goToChangeName(id: number) {
+      this.navCtrl.push(ChangeNamePage, { theID: id, token: this.resultLogin.token, exitumLogin: this.resultLogin })
+  }
+
+  loadingSupp() {
+    const loader = this.loadingCtrl.create({
+      content: "Suppression...",
+      duration: 2000
+    });
+    loader.present();
   }
 
 }

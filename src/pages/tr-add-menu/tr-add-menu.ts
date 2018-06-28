@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams, Platform } from 'ionic-angular';
+import { NavController, NavParams, Platform, LoadingController } from 'ionic-angular';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { Success } from '../../providers/model/login';
 import { ObsonatorProvider } from '../../providers/obsonator';
@@ -24,7 +24,8 @@ export class TrAddMenuPage {
     public navParams: NavParams,
     platform: Platform,
     public formBuilder: FormBuilder,
-    public obso: ObsonatorProvider) {
+    public obso: ObsonatorProvider,
+    public loadingCtrl: LoadingController) {
 
     platform.ready().then(() => {
 
@@ -65,8 +66,17 @@ export class TrAddMenuPage {
   }
 
   addPlat() {
-    this.obso.createMeals(this.resultLogin.token,this.form.value.title)
-    this.navCtrl.setRoot(TrAddMenuPage)
+    this.obso.createMeals(this.resultLogin.token, this.form.value.title)
+    this.loadingPlat();
+    // this.navCtrl.push(TrAddMenuPage)
+  }
+
+  loadingPlat() {
+    const loader = this.loadingCtrl.create({
+      content: "Ajout en cours...",
+      duration: 2000
+    });
+    loader.present();
   }
 
 }

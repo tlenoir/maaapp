@@ -13,10 +13,7 @@ page-tr-menu-list {
       display: inline-block
     }
   }
-  .list .item, .list .item-complex .item-content {
+  .list .item,.list .item-complex .item-content {
     background: #fff0;
-  }
-  .item .item-content.activated {
-    background-color: rgb(150, 137, 120);
   }
 }
