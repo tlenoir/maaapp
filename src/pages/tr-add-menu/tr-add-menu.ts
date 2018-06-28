@@ -13,7 +13,7 @@ import { ObsonatorProvider } from '../../providers/obsonator';
 })
 export class TrAddMenuPage {
 
-  private form: FormGroup;
+  form: FormGroup;
   dataInicial: any;
   maxDate: string;
   createMenu = 'http://groupe2.api/api/meal/create';

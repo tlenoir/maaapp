@@ -75,7 +75,9 @@ import { ChangeNamePage } from '../pages/change-name/change-name';
     FilePath,
     FileTransfer,
     ObsonatorProvider,
-    ContributorProvider
+    ContributorProvider,
+    ToastController,
+    PhonegapLocalNotification
   ]
 })
 export class AppModule {}
