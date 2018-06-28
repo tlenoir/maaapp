@@ -1,8 +1,10 @@
 page-welcomepage {
     
-    .bgColor {
-        background: linear-gradient(to bottom,#242423,#161241);
-    } 
+    .bgimg {
+        background-image: url('../../assets/imgs/fnd1.jpg');
+        background-size: cover;
+        
+    }
 
     .place {
         
@@ -15,13 +17,13 @@ page-welcomepage {
     }
 
     #progressbar {
-    background-color: #494747;
+    background-color: #ffffff00;
     border-radius: 13px; /* (height of inner div) / 2 + padding */
     padding: 3px;
     }
     
     #progressbar > div {
-        background: linear-gradient(to right, #63ecf1);
+        background: linear-gradient(to right, #11d3f5);
         width: 0%; /* Adjust with JavaScript */
         height: 10px;
         border-radius: 10px;
