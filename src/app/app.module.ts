@@ -21,6 +21,11 @@ import { Camera } from '@ionic-native/camera';
 import { PhonegapLocalNotification } from '@ionic-native/phonegap-local-notification';
 import { UserData } from "../providers/user-data";
 import { HttpClientModule } from '@angular/common/http';
+import { File } from '@ionic-native/file';
+import { FilePath } from '@ionic-native/file-path';
+import { FileTransfer } from '@ionic-native/file-transfer';
+import { ObsonatorProvider } from '../providers/obsonator';
+import { ContributorProvider } from '../providers/contributor';
 
 @NgModule({
   declarations: [
@@ -62,7 +67,12 @@ import { HttpClientModule } from '@angular/common/http';
     SQLite,
     Camera,
     PhonegapLocalNotification,
-    UserData
+    UserData,
+    File,
+    FilePath,
+    FileTransfer,
+    ObsonatorProvider,
+    ContributorProvider
   ]
 })
 export class AppModule {}
