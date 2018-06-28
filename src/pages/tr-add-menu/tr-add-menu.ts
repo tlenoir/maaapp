@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { Success } from '../../providers/model/login';
+import { ObsonatorProvider } from '../../providers/obsonator';
 
 // import { Http, Response } from '@angular/http';
 
@@ -15,12 +17,14 @@ export class TrAddMenuPage {
   dataInicial: any;
   maxDate: string;
   createMenu = 'http://groupe2.api/api/meal/create';
+  resultLogin: Success;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     platform: Platform,
-    public formBuilder: FormBuilder) {
+    public formBuilder: FormBuilder,
+    public obso: ObsonatorProvider) {
 
     platform.ready().then(() => {
 
@@ -38,8 +42,13 @@ export class TrAddMenuPage {
     console.log('ionViewDidLoad TrAddMenuPage');
   }
 
+  ionViewWillEnter() {
+    this.resultLogin = this.navParams.get('exitumLogin')
+  }
+
   logForm() {
     console.log(this.form.value)
+    this.addPlat()
   }
 
   @ViewChild('datePicker') datePicker;
@@ -52,6 +61,10 @@ export class TrAddMenuPage {
     } else {
       this.datePicker.open();
     }
+  }
+
+  addPlat() {
+    this.obso.createMeals(this.resultLogin.token,this.form.value.title)
   }
 
 }

@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
-
+import { Success } from '../../providers/model/login';
 import { TrAddMenuPage } from '../tr-add-menu/tr-add-menu';
+import { ObsonatorProvider } from '../../providers/obsonator';
+import { myMealsObject, Datum } from '../../providers/model/myMeals';
 
 @Component({
   selector: 'page-tr-menu-list',
@@ -9,10 +11,15 @@ import { TrAddMenuPage } from '../tr-add-menu/tr-add-menu';
 })
 export class TrMenuListPage {
 
+  resultLogin: Success;
+  grosTableau: myMealsObject;
+  Datatums: Datum[];
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    platform: Platform) {
+    platform: Platform,
+    public obso: ObsonatorProvider) {
 
     platform.ready().then(() => {
 
@@ -24,8 +31,25 @@ export class TrMenuListPage {
     console.log('ionViewDidLoad TrMenuListPage');
   }
 
+  ionViewWillEnter() {
+    this.resultLogin = this.navParams.get('exitumLogin');
+    this.seePlat();
+  }
+
   goToTrAddMenuPage() {
-    this.navCtrl.push(TrAddMenuPage);
+    this.navCtrl.push(TrAddMenuPage, { exitumLogin: this.resultLogin });
+    console.log('Jipé', this.resultLogin);
+  }
+
+  seePlat() {
+    this.obso.getMyMeals(this.resultLogin.token)
+      .then((res: myMealsObject) => {
+        this.grosTableau = res
+        console.log("Jipé TRMENU", res);
+        this.Datatums = this.grosTableau.data
+        console.log("Jipé TRMENU", this.grosTableau.data);
+      })
+      .catch((e) => console.log('error', e));
   }
 
 }

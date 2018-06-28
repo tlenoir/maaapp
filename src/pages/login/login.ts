@@ -83,19 +83,19 @@ export class LoginPage {
                     //         this.navCtrl.setRoot(HomePage, { username: this.login.username, password: this.login.password });
                     //     })
 
-                    // if (this.userIsSucces.userstype_id == 1) {
+                    if (this.userIsSucces.userstype_id == 1) {
 
-                    //     this.navCtrl.push(TrMenuListPage, { exitumLogin: this.userIsSucces })
+                        this.navCtrl.push(TrMenuListPage, { exitumLogin: this.userIsSucces })
 
-                    // } else if (this.userIsSucces.userstype_id == 2) {
+                    } else if (this.userIsSucces.userstype_id == 2) {
 
-                    //     this.navCtrl.push(ColWeekListPage, { exitumLogin: this.userIsSucces })
+                        this.navCtrl.push(ColWeekListPage, { exitumLogin: this.userIsSucces })
 
-                    // } else {
+                    } else {
 
-                    //     console.log('is an Assistante bro:', this.userIsSucces.userstype_id)
+                        console.log('is an Assistante bro:', this.userIsSucces.userstype_id)
 
-                    // }
+                    }
 
                     console.log('login', this.userIsSucces);
                 }, (error: HttpErrorResponse) => {
