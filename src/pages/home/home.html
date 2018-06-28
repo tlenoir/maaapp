@@ -11,36 +11,84 @@
 
   <ion-label>INTEGRATION DES DIFFERENTS UTILISATEURS</ion-label>
 
+  <div *ngIf="!ngif">
+
+      <form #loginForm="ngForm" novalidate>
   <ion-list>
 
     <ion-item>
       <ion-label floating>Prénom d'Utilisateur</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input class="item-input-user" [(ngModel)]="createAccount.fname" class="card" name="fname" type="text" #username="ngModel"
+        spellcheck="false" autocapitalize="off" required>
+      </ion-input>
     </ion-item>
+    <p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+      Le prénom d'utilisateur est requis !
+    </p>
 
     <ion-item>
       <ion-label floating>Nom d'Utilisateur</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input class="item-input-user" [(ngModel)]="createAccount.lname" class="card" name="lname" type="text" #username="ngModel"
+        spellcheck="false" autocapitalize="off" required>
+      </ion-input>
     </ion-item>
+    <p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+      Le nom d'utilisateur est requis !
+    </p>
+
+    <ion-item>
+      <ion-label floating>Adresse email</ion-label>
+      <ion-input class="item-input-user" [(ngModel)]="createAccount.email" class="card" name="email" type="text" #username="ngModel"
+        spellcheck="false" autocapitalize="off" required>
+      </ion-input>
+    </ion-item>
+    <p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+      L'Email d'utilisateur est requis !
+    </p>
 
     <ion-item>
       <ion-label floating>Mot de Passe</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input class="item-input-user" [(ngModel)]="createAccount.password" class="card" name="password" type="password" #username="ngModel"
+        spellcheck="false" autocapitalize="off" required>
+      </ion-input>
     </ion-item>
+    <p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+      Le mot de passe est requis !
+    </p>
 
     <ion-item>
       <ion-label floating>Confirmer Mot de Passe</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input class="item-input-user" [(ngModel)]="createAccount.c_password" class="card" name="c_password" type="password"
+        #username="ngModel" spellcheck="false" autocapitalize="off" required>
+      </ion-input>
     </ion-item>
+    <p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+      La confirmation du mot de est requis !
+    </p>
 
     <ion-item>
       <ion-label floating>Type d'Utilisateur</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input class="item-input-user" [(ngModel)]="createAccount.userType_id" class="card" name="userType_id" type="text" #username="ngModel"
+        spellcheck="false" autocapitalize="off" required>
+      </ion-input>
     </ion-item>
+    <p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+      Le nom d'userType_id est requis !
+    </p>
 
+  
   </ion-list>
+  <ion-row responsive-sm>
+    <ion-col>
+      <button ion-button block color="dark" (click)="onLogin(loginForm)" type="submit">Go !</button>
+    </ion-col>
+  </ion-row>
+
+      </form>
+  </div>
   <!-- Carte explicative -->
   <ion-card>
+    
 
     <!-- <img src="assets/icon/favicon.png"/> -->
 
@@ -80,10 +128,10 @@
 </ion-content>
 
 <ion-footer>
-    <ion-navbar>
-  <ion-label>
-    ACCÈS AUX DIFFÉRENTES SECTIONS
-  </ion-label>
+  <ion-navbar>
+    <ion-label>
+      ACCÈS AUX DIFFÉRENTES SECTIONS
+    </ion-label>
     <ion-row>
       <ion-col>
         <button ion-button full color='danger' (tap)="launchTraiteur()" round>Traiteurs</button>

@@ -5,35 +5,20 @@
   Ionic pages and navigation.
 -->
 <ion-header *ngIf="!ngif">
-<<<<<<< HEAD
-  <ion-navbar>
-    <ion-title>Connection</ion-title>
-=======
   <ion-navbar transparent>
     <ion-title>
       <h2>CONNECTE TOI</h2>
     </ion-title>
->>>>>>> ba6eb7ae65ad12078e282a111827e772543e8e2d
   </ion-navbar>
 </ion-header>
 
 
-<<<<<<< HEAD
-<ion-content padding>
-=======
 <ion-content class="bgimg" padding center>
->>>>>>> ba6eb7ae65ad12078e282a111827e772543e8e2d
 
   <div *ngIf="!ngif">
 
     <form #loginForm="ngForm" novalidate>
       <ion-list no-lines>
-<<<<<<< HEAD
-        <ion-item>
-          <ion-label id="item-label-username" stacked color="primary">Nom d'utilisateur</ion-label>
-          <ion-input class="item-input-user" [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false"
-            placeholder="Utilsateur" autocapitalize="off" required>
-=======
         <div text-center>
           <img width="300" src="assets/icon/logo.png" />
         </div>
@@ -41,35 +26,12 @@
           <ion-label class="card" id="item-label-username" stacked style="font-size: 120%">Nom d'utilisateur</ion-label>
           <ion-input class="item-input-user" [(ngModel)]="login.username" class="card" name="username" type="text" #username="ngModel"
             spellcheck="false" placeholder="Utilisateur" autocapitalize="off" required>
->>>>>>> ba6eb7ae65ad12078e282a111827e772543e8e2d
           </ion-input>
         </ion-item>
         <p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
           Le nom d'utilisateur est requis !
         </p>
 
-<<<<<<< HEAD
-        <ion-item>
-          <ion-label id="item-label-userpassword" stacked color="primary">Mot de passe</ion-label>
-          <ion-input class="item-input-user" [(ngModel)]="login.password" name="password" type="password" #password="ngModel" placeholder="Mot de passe"
-            required>
-          </ion-input>
-        </ion-item>
-        <p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
-          Le mot de passe est requis !
-        </p>
-      </ion-list>
-
-      <ion-row responsive-sm>
-        <ion-col>
-          <button ion-button (click)="onLogin(loginForm)" type="submit" block>Go !</button>
-        </ion-col>
-        <ion-col>
-          <button ion-button (click)="onSignup()" color="light" icon-only block>
-            <ion-icon name="add"></ion-icon>
-          </button>
-        </ion-col>
-=======
         <ion-item class="card">
           <ion-label class="card" id="item-label-userpassword" stacked color="dark" style="font-size: 120%">Mot de passe</ion-label>
           <ion-input class="item-input-user" [(ngModel)]="login.password" class="card" name="password" type="password" #password="ngModel"
@@ -91,7 +53,6 @@
             <ion-icon name="add"></ion-icon>
           </button>
         </ion-col> -->
->>>>>>> ba6eb7ae65ad12078e282a111827e772543e8e2d
       </ion-row>
 
       <ion-row responsive-sm>
