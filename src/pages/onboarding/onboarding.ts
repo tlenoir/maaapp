@@ -1,22 +1,13 @@
-import { LoginPage } from './../login/login';
-import { HomePage } from './../home/home';
+import { WelcomepagePage } from './../welcomepage/welcomepage';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { Component } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
-
-/**
- * Generated class for the OnboardingPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-onboarding',
   templateUrl: 'onboarding.html',
 })
 export class OnboardingPage {
-
   database: SQLiteObject;
   skipMsg: string = "Skip";
   checkBox: number = 0;
@@ -72,7 +63,7 @@ export class OnboardingPage {
   checkIfCheckoutIsValidate() {
     this.database.executeSql('SELECT checkValidate FROM OnBoarding', {})
       .then((data) => {
-        if (data.rows.length == 1) this.navCtrl.setRoot(LoginPage);
+        if (data.rows.length == 1) this.navCtrl.setRoot(WelcomepagePage);
         console.log('checkValidate', data.rows.length)
       })
 
@@ -92,12 +83,12 @@ export class OnboardingPage {
     if (this.checkBox == 1) {
       this.database.executeSql("INSERT INTO OnBoarding(checkValidate) VALUES ('1')", {})
         .then(() => {
-          this.navCtrl.setRoot(LoginPage);
+          this.navCtrl.setRoot(WelcomepagePage);
           console.log('INSERT INTO OnBoarding(checkValidate) GOOD')
 
         })
     }
-    else this.navCtrl.setRoot(LoginPage)
+    else this.navCtrl.setRoot(WelcomepagePage)
   }
 
 }

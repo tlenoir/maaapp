@@ -13,7 +13,7 @@ export class UserData {
   HAS_LOGGED_IN = 'hasLoggedIn';
   HAS_SEEN_TUTORIAL = 'hasSeenTutorial';
 
-  urlLogin = 'http://groupe2.api/api/login';
+  urlLogin = 'http://groupe2.motjo.io/api/login';
   // groupe2.api/api/login?email=tlenoir.tcc@gmail.com&password=azerty
 
   constructor(

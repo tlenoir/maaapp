@@ -5,16 +5,48 @@ page-login{
         font-size: 1em;
         margin: auto;
         padding-top: 2rem;
+        
     }
     #item-label-username{
 
         font-size: 1em;
         margin: auto;
         padding-top: 2rem;
-    }
-    .item-input-user{
-
         
     }
+
+    .bgimg {
+        background-image: url('../../assets/imgs/fnd1.jpg');
+        background-size: cover;
+        
+    }
+
+    .card {
+        background-color: transparent;
+    }
+
+    // ion-header {
+
+    //     .toolbar {
+      
+    //       position: absolute;
+      
+      
+      
+    //       .toolbar-background {
+      
+    //         background: transparent;
+      
+    //       }
+      
+    //       .toolbar-title {
+      
+    //         color: black;
+      
+    //       }
+      
+    //     }
+      
+    //   }
     
 }

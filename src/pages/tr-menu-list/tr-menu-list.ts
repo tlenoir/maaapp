@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, Platform } from 'ionic-angular';
+import { NavController, NavParams, Platform, AlertController } from 'ionic-angular';
 import { Success } from '../../providers/model/login';
 import { TrAddMenuPage } from '../tr-add-menu/tr-add-menu';
 import { ObsonatorProvider } from '../../providers/obsonator';
 import { myMealsObject, Datum } from '../../providers/model/myMeals';
+import { ChangeNamePage } from '../change-name/change-name';
 
 @Component({
   selector: 'page-tr-menu-list',
@@ -16,12 +17,14 @@ export class TrMenuListPage {
   Datatums: Datum[];
 
   toppings;
+  newName: string;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     platform: Platform,
-    public obso: ObsonatorProvider) {
+    public obso: ObsonatorProvider,
+    public alertCtrl: AlertController) {
 
     platform.ready().then(() => {
 
@@ -54,12 +57,13 @@ export class TrMenuListPage {
       .catch((e) => console.log('error', e));
   }
 
-  deletePlat(id){
+  deletePlat(id) {
     this.obso.deleteMeals(this.resultLogin.token, id)
   }
 
-  updatePlat(name){
-    this.obso.updateMeals(this.resultLogin.token, name)
+
+  goToChangeName(id: number){
+    this.navCtrl.push(ChangeNamePage, {theID: id, token: this.resultLogin.token, exitumLogin: this.resultLogin})
   }
 
 }

@@ -14,11 +14,9 @@
 
 
 <ion-content padding>
-  <ion-list >
-    <ion-item *ngFor="let datatum of Datatums" class="letters-list">
-
+    <ion-item *ngFor="let xyz of mealById">
+      {{xyz.meal_id}}
     </ion-item>
-  </ion-list>
 </ion-content>
 
 <ion-footer position="bottom">
