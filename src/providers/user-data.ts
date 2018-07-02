@@ -13,8 +13,8 @@ export class UserData {
   HAS_LOGGED_IN = 'hasLoggedIn';
   HAS_SEEN_TUTORIAL = 'hasSeenTutorial';
 
-  urlLogin = 'http://groupe2.api/api/login';
-  urlCreate = 'http://groupe2.api/api/register'
+  urlLogin = 'http://groupe2.motjo.io/api/login';
+  urlCreate = 'http://groupe2.motjo.io/api/register';
   // groupe2.api/api/login?email=tlenoir.tcc@gmail.com&password=azerty
 
   constructor(

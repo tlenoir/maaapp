@@ -15,9 +15,20 @@
 
 <ion-content class="card-background-page">
 
-    <ion-item *ngFor="let xyz of mealById">
-        {{xyz.meal_id}} {{xyz.meal}}
-      </ion-item>
+    <button (click)="push()" >
+        Mardi
+      </button>
+      <button (click)="push()">
+        Mercredi
+      </button>
+
+      <button (click)="push()">
+        Jeudi
+      </button>
+      <button (click)="push()">
+        Vendredi
+      </button>
+
 
 
   <!-- <ion-label>Choisir sa date</ion-label>
@@ -65,6 +76,6 @@
 
 <ion-footer position="bottom">
 
-  <button ion-button round outline center (click)="launchDaysPage()"> C'est çà que je veux !</button>
+  <button ion-button round outline center (click)="push()"> C'est çà que je veux !</button>
 
 </ion-footer>

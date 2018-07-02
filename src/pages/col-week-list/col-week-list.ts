@@ -1,3 +1,4 @@
+import { ColDaysListPage } from './../col-days-list/col-days-list';
 import { ContributorProvider } from './../../providers/contributor';
 import { menuGetObject, Datum, Meal } from './../../providers/model/menuGet';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -88,7 +89,12 @@ export class ColWeekListPage {
     console.log('nextDayIs', this.nextDay)
     this.getMenu(this.resultLogin.token, this.nextDay)
 
+    
 
+  }
+
+  push(){
+    this.navCtrl.push(ColDaysListPage);
   }
 
   getMenu(token, datee) {
